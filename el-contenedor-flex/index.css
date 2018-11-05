@@ -1,7 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .box > * {
    background: lightblue;
    border: 1px solid blue;
 }
 .box {
-    display: flex;
+  display: flex;
+  /**
+  * Valores por defecto:
+  *  flex-direction: row; (row | row-reverse | column | column-reverse)
+  *  flex-basis:     auto;
+  *  flex-wrap:      nowrap;
+  */
+  flex-direction: column;
 }
