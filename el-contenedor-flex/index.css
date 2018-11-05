@@ -9,11 +9,16 @@ html, body {
 .box {
   background: lightgreen;
   border: 2px solid green;
+  width: 100vw;
+  height: 200px;
 }
 
 .box > * {
   background: lightblue;
   border: 1px solid blue;
+  min-width: 150px;
+  height: 105px;
+  text-align: center;
 }
 
 /**
@@ -23,7 +28,6 @@ html, body {
 /** Contenedor Flex. */
 .box {
   display: flex;
-  width: 100vw;
   /**
   * Valores por defecto:
   *  flex-direction: row; (row | row-reverse | column | column-reverse)
@@ -33,6 +37,13 @@ html, body {
   *  flex-flow: [flex-direction] [flex-wrap]
   */
   flex-flow: row nowrap;
+  /**
+   * Valores
+   *  align-items:     (center | flex-start | flex-end | strech);
+   *  justify-content: (center | flex-start | flex-end | strech | space-around | space-between)
+   */
+  align-items: center;
+  justify-content: space-around;
 }
 
 /** Elementos del contenedor flex. */
@@ -48,9 +59,9 @@ html, body {
   * Abrebiatura.
   *  flex: [flex-grow] [flex-shrink] [flex-basis]
   */
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 }
 
 .box > *:nth-child(3) {
-  flex: 6 1 auto;
+  flex: 0 1 auto;
 }
