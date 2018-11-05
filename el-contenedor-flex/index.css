@@ -13,8 +13,10 @@ html, body {
   * Valores por defecto:
   *  flex-direction: row; (row | row-reverse | column | column-reverse)
   *  flex-basis:     auto;
-  *  flex-wrap:      nowrap;
+  *  flex-wrap:      nowrap; (nowrap | wrap)
+  *
+  * Abreviatura:
+  *  flex-flow: [flex-direction] [flex-wrap]
   */
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: column nowrap;
 }
