@@ -1,22 +1,56 @@
 html, body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Colores.
+ */
+.box {
+  background: lightgreen;
+  border: 2px solid green;
 }
 
 .box > * {
-   background: lightblue;
-   border: 1px solid blue;
+  background: lightblue;
+  border: 1px solid blue;
 }
+
+/**
+ * Posicionamiento.
+ */
+
+/** Contenedor Flex. */
 .box {
   display: flex;
+  width: 100vw;
   /**
   * Valores por defecto:
   *  flex-direction: row; (row | row-reverse | column | column-reverse)
-  *  flex-basis:     auto;
   *  flex-wrap:      nowrap; (nowrap | wrap)
   *
   * Abreviatura:
   *  flex-flow: [flex-direction] [flex-wrap]
   */
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
+}
+
+/** Elementos del contenedor flex. */
+.box > * {}
+
+.box > *:not(:nth-child(3)) {
+ /**
+  * Valores por defecto.
+  *  flex-grow: 0;
+  *  flex-shrink: 1;
+  *  flex-basis: auto;
+  *
+  * Abrebiatura.
+  *  flex: [flex-grow] [flex-shrink] [flex-basis]
+  */
+  flex: 1 1 auto;
+}
+
+.box > *:nth-child(3) {
+  flex: 6 1 auto;
 }
