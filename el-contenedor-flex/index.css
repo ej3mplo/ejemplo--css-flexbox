@@ -1,0 +1,7 @@
+.box > * {
+   background: lightblue;
+   border: 1px solid blue;
+}
+.box {
+    display: flex;
+}
